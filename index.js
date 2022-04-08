@@ -44,9 +44,22 @@ app.get('/addUser', (req,res)=>{
         else
         console.log(err);
     })
+})
+
+app.get('/checkPatient', (req,res)=>{
+    console.log(req.query)
 
 
-    res.send("Success")
+    db.query('select * from login where idlogin=? and password=?',
+    [req.query.id,req.query.password],(err,rows,fields)=>{
+        console.log(rows)
+
+       
+        if(!err)
+        res.send(rows);
+        else
+        console.log(err);
+    })
 })
 
 app.get('/route',(req,res)=>{

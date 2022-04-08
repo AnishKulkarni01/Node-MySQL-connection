@@ -25,6 +25,125 @@
 
 </head>
 <body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="#" style="margin-left: 80px;"><h1>Hospital</h1></a>
+    
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#mid">Link 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 3</a>
+      </li>
+    </ul>
+  </nav>
+  <section class="top">
+  
+<section style="padding: 10px 50px;" id="s1">
+  <h2>Responsive Form</h2>
+  <p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.</p>
+  <div class="row" ><div class="col-md-6"><img class="i2" src="css/i2.png"></div>
+  <div class="container col-md-6">
+    <form action="">
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="name" name="name" placeholder="Your name..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="gender">Gender</label>
+        </div>
+        
+        <div class="col-75">
+          <select id="gender" name="gender">
+            <option value="australia">Male</option>
+            <option value="canada">Female</option>
+            <option value="usa">Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="age">Age</label>
+        </div>
+        <div class="col-75">
+          <input type="number" id="address" name="address" placeholder="Your age..">
+        </div>
+      </div>
+     
+      <div class="row">
+        <div class="col-25">
+          <label for="id">Address</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="age" name="age" placeholder="Your address..">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label for="">E-mail</label>
+        </div>
+        <div class="col-75">
+          <input type="email" id="mail" name="mail" placeholder="Your mail..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="">Password</label>
+        </div>
+        <div class="col-75">
+          <input type="password" id="rpass" name="rpass" placeholder="Your password..">
+        </div>
+      </div>
+     
+      <div class="row">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div></div>
+
+
+
+  <div ><section class="container-fluid" id="mid">
+    <div class="container-fluid col-md-6">
+      <form id="plogin_form">
+        <div class="row">
+          <div class="col-25">
+            <label for="mail">E-Mail</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="lmail" name="name" placeholder="Your email..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="lpass">Password</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="lpass" name="name" placeholder="Your password..">
+          </div>
+        </div>
+       
+        <div class="row">
+          <div class="lbtn" onclick="submitlogin()">Submit</div>
+        </div>
+      </form>
+    </div></div>
+  
+  
+  </section></div>
+  
+  <button id="b1" onclick="">ok</button>
     <table class="">
         <thead>
             <tr>
@@ -43,8 +162,18 @@
         <input type="number" id="id" name="fname" value=0><br>
         <label for="lname">Password:</label><br>
         <input type="text" id="password" name="pass" value="Doe"><br><br>
-        <button>Submit</button>
+        <button id="testbtn">Submit</button>
       </form> 
+
+  
+</section></section>
+  
+
+
+
+
+
+
 
       
       <script src="./js/action.js"></script>
