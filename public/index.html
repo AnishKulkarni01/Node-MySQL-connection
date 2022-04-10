@@ -17,6 +17,8 @@
   <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/3569aa9baa.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/style.css">
   <!-- <script src="action.js"> -->
     
     
@@ -24,32 +26,35 @@
 
 
 </head>
-<body>
+<body style="">
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
     <!-- Brand/logo -->
     <a class="navbar-brand" href="#" style="margin-left: 80px;"><h1>Hospital</h1></a>
     
     <!-- Links -->
-    <ul class="navbar-nav">
+    <ul class="navbar-nav container-fluid" style="justify-content: end;">
       <li class="nav-item">
-        <a class="nav-link" href="#mid">Link 1</a>
+        <a class="nav-link" href="#mid" ><b>Log In</b></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link 2</a>
+        <a class="nav-link" href="#admin"><b>Admin</b></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link 3</a>
+        <a class="nav-link" href="#foot"><b>Links</b></a>
       </li>
     </ul>
   </nav>
-  <section class="top">
-  
-<section style="padding: 10px 50px;" id="s1">
+
+
+
+  <div>
+<section style="padding: 10px 50px;" id="s1" >
   <h2>Responsive Form</h2>
   <p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.</p>
-  <div class="row" ><div class="col-md-6"><img class="i2" src="css/i2.png"></div>
+  <div class="row" ><div class="col-md-6"><img class="img" src="css/i2.png"></div>
   <div class="container col-md-6">
     <form action="">
+      <h3 style="text-align: center;">Register here</h3>
       <div class="row">
         <div class="col-25">
           <label for="fname">Name</label>
@@ -112,11 +117,15 @@
     </form>
   </div></div>
 
+</div>
 
 
-  <div ><section class="container-fluid" id="mid">
-    <div class="container-fluid col-md-6">
-      <form id="plogin_form">
+  <div ><section class="container-fluid" id="mid" >
+    <!-- patient login -->
+    <div class="container-fluid col-md-6" style="background-color: #f2f2f2; padding-top: 15px;">
+      <form id="plogin_form" >
+        <h3 style="text-align: center;">Login here</h3>
+
         <div class="row">
           <div class="col-25">
             <label for="mail">E-Mail</label>
@@ -135,10 +144,239 @@
         </div>
        
         <div class="row">
-          <div class="lbtn" onclick="submitlogin()">Submit</div>
+          <div class="lbtn" style="text-align: center;" onclick="submitlogin()">Submit</div>
         </div>
       </form>
     </div></div>
+
+
+
+    <div style="margin:50px 50px 50px 150px;"> 
+      <div class="slider-container" style="margin:px;width:90% ;height :70%;; align-items: center;">
+     <div class="left-slides">
+         <div style="background-color: #353b48;">
+             <h3>Moon</h3>
+             <p>making the nights brighter.</p>
+         </div>
+ 
+       
+ 
+         <div style="background-color: #4bcffa;">
+             <h3 style="text-align: center;">Blue Kingfisher</h3>
+             <p>flies like the beast.</p>
+         </div>
+ 
+         <div style="background-color: #218c74;">
+             <h3>Intense</h3>
+             <p>Misty shroud over a forest.</p>
+         </div>
+ 
+         
+     </div>
+ 
+     <div class="right-slides">
+         <div style="background-image: url('css/c1.png');">
+         </div>
+ 
+         <div style="background-image: url('css/c2.png');">
+         </div>
+ 
+         <div style="background-image: url('css/c3.png');">
+         </div>
+ 
+       
+     </div>
+ 
+     <div class="buttons">
+         <button class="left-btn">
+             <i class="fas fa-arrow-down"></i>
+         </button>
+         <button class="right-btn">
+             <i class="fas fa-arrow-up"></i>
+         </button>
+     </div>
+ </div></div>
+
+
+
+     <!-- admin login -->
+    <div style="margin-top: 50px;" id="admin">
+    <div class="container-fluid col-md-6" style="background-color: #f2f2f2; padding-top: 10px;">
+      <form id="plogin_form" >
+        <h3 style="text-align: center;">Admin Login only</h3>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="mail">Username</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="aduser" name="name" placeholder="Your username..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="lpass">Password</label>
+          </div>
+          <div class="col-75">
+            <input type="password" id="adpass" name="name" placeholder="Your password..">
+          </div>
+        </div>
+       
+        <div class="row">
+          <div id="adbtn"class="lbtn" style="text-align: center;" onclick="validate()">Submit</div>
+        </div>
+      </form>
+    </div></div>
+
+
+    <div>..</div>
+    <div id="foot">
+      <!-- Remove the container if you want to extend the Footer to full width. -->
+<div class="container my-5">
+  <!-- Footer -->
+  <footer
+          class="text-center text-lg-start text-dark"
+          style="background-color: #ECEFF1"
+          >
+    <!-- Section: Social media -->
+    <section
+             class="d-flex justify-content-between p-4 text-white"
+             style="background-color: #21D192"
+             >
+      <!-- Left -->
+      <div class="me-5">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold">Company name</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              Here you can use rows and columns to organize your footer
+              content. Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Products</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              <a href="#" class="text-dark">MDBootstrap</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark">MDWordPress</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark">BrandFlow</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark">Bootstrap Angular</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Useful links</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              <a href="#" class="text-dark">Your Account</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark">Become an Affiliate</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark">Shipping Rates</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Contact</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+            <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
+            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div
+         class="text-center p-3"
+         style="background-color: rgba(0, 0, 0, 0.2)"
+         >
+      © 2020 Copyright:
+      <a class="text-dark" href="https://mdbootstrap.com/"
+         >MDBootstrap.com</a
+        >
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+</div>
+<!-- End of .container -->
+    </div>
   
   
   </section></div>

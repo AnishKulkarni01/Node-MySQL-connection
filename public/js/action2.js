@@ -14,9 +14,12 @@ button3.addEventListener('click',(e)=>{
     }).then( res => {
         console.log(res.data)
         let list = document.createElement('ul');
+        var l1 = document.createElement('li');
+            l1.textContent ="(ID , PASSWORD )";
+            list.appendChild(l1);
         res.data.forEach(function (row) {
             var li = document.createElement('li');
-            li.textContent = row.idlogin + "  " + row.password;
+            li.textContent = " ( "+row.idlogin + " , " + row.password+" ) ";
             list.appendChild(li);
         });
         document.getElementById('#t2').appendChild(list);
