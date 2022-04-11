@@ -79,3 +79,44 @@ app.get('/route/:id',(req,res)=>{
         console.log(err);
     })
 })
+
+app.get('/showPatients',(req,res)=>{
+    db.query('select * from patient',(err,rows,fields)=>{
+        if(!err)
+        res.send(rows);
+        else
+        console.log(err);
+    })
+})
+
+app.get('/showDoctors',(req,res)=>{
+    db.query('select * from doctor',(err,rows,fields)=>{
+        if(!err)
+        res.send(rows);
+        else
+        console.log(err);
+    })
+})
+
+app.get('/patientID/:mail',(req,res)=>{
+    db.query('select p_id from patient WHERE p_mail= ?',[req.params.mail],(err,rows,fields)=>{
+        if(!err)
+        res.send(rows);
+        else
+        console.log(err);
+    })
+})
+
+
+app.get('/addPatient', (req,res)=>{
+    console.log(req.query)
+
+
+    db.query('insert into patient (p_name,p_gend,age,address,p_pwd,p_mail) VALUES (?,?,?,?,?,?)',
+    [req.query.namep,req.query.genderp,req.query.agep,req.query.addressp,req.query.passp,req.query.mailp],(err,rows,fields)=>{
+        if(!err)
+        res.send(rows);
+        else
+        console.log(err);
+    })
+})

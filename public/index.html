@@ -18,7 +18,8 @@
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/3569aa9baa.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./css/style.css">
+  <base href="/">
+  <link  href="./css/style.css">
   <!-- <script src="action.js"> -->
     
     
@@ -26,7 +27,7 @@
 
 
 </head>
-<body style="">
+<body>
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
     <!-- Brand/logo -->
     <a class="navbar-brand" href="#" style="margin-left: 80px;"><h1>Hospital</h1></a>
@@ -53,14 +54,14 @@
   <p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.</p>
   <div class="row" ><div class="col-md-6"><img class="img" src="css/i2.png"></div>
   <div class="container col-md-6">
-    <form action="">
+    <form action="" id="regp">
       <h3 style="text-align: center;">Register here</h3>
       <div class="row">
         <div class="col-25">
           <label for="fname">Name</label>
         </div>
         <div class="col-75">
-          <input type="text" id="name" name="name" placeholder="Your name..">
+          <input type="text" id="namep" name="namep" placeholder="Your name..">
         </div>
       </div>
       <div class="row">
@@ -69,10 +70,10 @@
         </div>
         
         <div class="col-75">
-          <select id="gender" name="gender">
-            <option value="australia">Male</option>
-            <option value="canada">Female</option>
-            <option value="usa">Other</option>
+          <select id="genderp" name="genderp">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
           </select>
         </div>
       </div>
@@ -81,7 +82,7 @@
           <label for="age">Age</label>
         </div>
         <div class="col-75">
-          <input type="number" id="address" name="address" placeholder="Your age..">
+          <input type="number" id="agep" name="agep" placeholder="Your age..">
         </div>
       </div>
      
@@ -90,7 +91,7 @@
           <label for="id">Address</label>
         </div>
         <div class="col-75">
-          <input type="text" id="age" name="age" placeholder="Your address..">
+          <input type="text" id="addressp" name="addressp" placeholder="Your address..">
         </div>
       </div>
 
@@ -99,7 +100,7 @@
           <label for="">E-mail</label>
         </div>
         <div class="col-75">
-          <input type="email" id="mail" name="mail" placeholder="Your mail..">
+          <input type="email" id="mailp" name="mailp" placeholder="Your mail..">
         </div>
       </div>
       <div class="row">
@@ -107,12 +108,12 @@
           <label for="">Password</label>
         </div>
         <div class="col-75">
-          <input type="password" id="rpass" name="rpass" placeholder="Your password..">
+          <input type="password" id="passp" name="passp" placeholder="Your password..">
         </div>
       </div>
      
       <div class="row">
-        <input type="submit" value="Submit">
+        <button id="b11">Submit</button>
       </div>
     </form>
   </div></div>
@@ -131,7 +132,7 @@
             <label for="mail">E-Mail</label>
           </div>
           <div class="col-75">
-            <input type="text" id="lmail" name="name" placeholder="Your email..">
+            <input type="text" id="lmail" name="lname" placeholder="Your email..">
           </div>
         </div>
         <div class="row">
@@ -139,7 +140,7 @@
             <label for="lpass">Password</label>
           </div>
           <div class="col-75">
-            <input type="text" id="lpass" name="name" placeholder="Your password..">
+            <input type="text" id="lpass" name="lname" placeholder="Your password..">
           </div>
         </div>
        
@@ -202,7 +203,7 @@
      <!-- admin login -->
     <div style="margin-top: 50px;" id="admin">
     <div class="container-fluid col-md-6" style="background-color: #f2f2f2; padding-top: 10px;">
-      <form id="plogin_form" >
+      <form id="alogin_form" >
         <h3 style="text-align: center;">Admin Login only</h3>
 
         <div class="row">

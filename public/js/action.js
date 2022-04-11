@@ -11,6 +11,7 @@ const plform=document.getElementById('plogin_form')
 const pmail=document.getElementById('lmail')
 const ppass=document.getElementById('lpass')
 const b2=document.getElementById('testbtn')
+
 b2.addEventListener("click",(e)=> {
     e.preventDefault()
     console.log(id.value)
@@ -56,6 +57,32 @@ button.addEventListener('click',(e)=>{
         document.getElementById('#t1').appendChild(list);
     }).catch(err => console.log(err));
 })
+
+const regpatient=document.getElementById('regp')
+const b11=document.getElementById('b11')
+const passp=document.getElementById('passp')
+const namep=document.getElementById('namep')
+const genderp=document.getElementById('genderp')
+const agep=document.getElementById('agep')
+const addressp=document.getElementById('addressp')
+const mailp=document.getElementById('mailp')
+b11.addEventListener("click",(e)=> {
+    e.preventDefault()
+    console.log("ok")
+   
+    fetchURL='/addPatient?namep='+namep.value+'&genderp='+genderp.value+'&agep='+agep.value+'&addressp='+addressp.value+'&passp='+passp.value+'&mailp='+mailp.value
+    
+    fetch(fetchURL).then((response)=>{
+        console.log(response);
+       
+    })
+    window.location('index2.html')
+})
+
+
+
+
+
 
 
 
@@ -147,3 +174,5 @@ function autoChangeSlide() {
   }%)`;
   leftSlide.style.transform = `translateY(-${currentSlide * 100}%)`;
 }
+
+
