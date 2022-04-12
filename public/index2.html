@@ -43,17 +43,126 @@
       </nav>
       
     <section>
-        <p id="PID"></p>
+     <div class="row">
+        <div class="container-fluid col-md-4" style="background-color: #f2f2f2; padding-top: 15px; margin-top: 50px;">
+           <div>
+            <form id="pid_form" >
+              <h3 style="text-align: center;">Please Enter</h3>
+      
+              <div class="row">
+                <div class="col-25">
+                  <label for="mail">E-Mail</label>
+                </div>
+                <div class="col-75" style="margin-bottom: 15px;">
+                  <input type="text" id="plmail" name="plmail" placeholder="Your email..">
+                </div>
+              </div>
+              
+             
+              <div class="row">
+                <button  class="" id="b21" onclick="">ok</button>
+              </div>
+            </form>
+            </div>
+       
+          </div>
+          
+          
+          
+          
+          
+          <div class="container-fluid col-md-4" style="background-color: #f2f2f2; padding-top: 15px; margin-top: 50px;">
+            <form id="dspec_form" >
+              <h3 style="text-align: center;">Please Enter</h3>
+      
+              <div class="row">
+                <div class="col-25">
+                  <label for="spec">Specialization</label>
+                </div>
+                
+                <div class="col-75" style="margin-bottom: 15px;">
+                  <select id="dspec" name="genderp">
+                    <option value="Ortho">Ortho</option>
+                    <option value="Neuro">Neuro</option>
+                    
+                    <option value="Opthalmo">Opthalmo</option>
+                    <option value="Homeopathy">Homeopathy</option>
+                    <option value="General">General</option>
+                    <option value="Dentist">Dentist</option>
+                  </select>
+                </div>
+              </div>
+             
+              <!-- <div class="row">
+                <button  class="" id="b22" onclick="">ok</button>
+              </div> -->
+            </form>
+       
+          </div>
+        
+        </div>
+
+        <p id="PID"> here pid</p>
+        <div class="row" style="margin:15px 15%">
+            <div class="col-md-4">    <table class="">
+                <thead>
+                    <tr>
+                        <th>Patient ID</th>
+                    </tr>
+                </thead>
+                <table id="#t21">
+        
+                </table>
+        
+            </table></div>
+            <div class="col-md-4"></div>
+        </div>
+
+
+
+
+        <div class="row" style="margin: 50px 20px 20px 20px;" >
+          <!-- book an appointment -->
+          
+              <div class="container col-md-6">
+                <form action="">
+                  <h3 style="text-align: center;">Book an appointment</h3>
+                  
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="gender">Date</label>
+                    </div>
+                    
+                    <div class="col-75">
+                      <input type="date" id="bdt" name="bdt" placeholder="How many days from now..">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="age">Time</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="number" id="btm" name="btm" min="6" max="20" placeholder="Time in 24 hr format..">
+                    </div>
+                  </div>
+                 
+                  
+                </form>
+              </div>
+              
+          </div>
+
+
         <div class="row container-fluid " style="padding-top: 30px;">
        
             <div class="col-md-3 col-sm-12">
                 <h4>Check available doctors
                 </h4>
-                <button  class="" id="b3" onclick="">ok</button>
+                <button  class="" id="b22" onclick="">ok</button>
                 <table class="">
                     <thead>
                     </thead>
-                    <table id="#t2">
+                    <table id="#t22">
             
                     </table>
             
@@ -61,13 +170,13 @@
                 
             </div>
             <div class="col-md-3 col-sm-12">
-                <h4>Lorem ipsum dolor sit amet
+                <h4>Check available rooms
                 </h4>
-                <button id="b3" onclick="">ok</button>
+                <button id="b23" onclick="">ok</button>
                 <table class="">
                     <thead>
                     </thead>
-                    <table id="#t2">
+                    <table id="#t23">
             
                     </table>
             
@@ -104,33 +213,13 @@
         <h3 style="text-align: center;">Book an appointment</h3>
         <div class="row">
           <div class="col-25">
-            <label for="fname">Name</label>
+            <label for="fname">PatientID</label>
           </div>
           <div class="col-75">
-            <input type="text" id="name" name="name" placeholder="Your name..">
+            <input type="text" id="bpid" name="bpid" placeholder="Your Patient ID..">
           </div>
         </div>
-        <div class="row">
-          <div class="col-25">
-            <label for="gender">Gender</label>
-          </div>
-          
-          <div class="col-75">
-            <select id="gender" name="gender">
-              <option value="australia">Male</option>
-              <option value="canada">Female</option>
-              <option value="usa">Other</option>
-            </select>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-25">
-            <label for="age">Age</label>
-          </div>
-          <div class="col-75">
-            <input type="number" id="address" name="address" placeholder="Your age..">
-          </div>
-        </div>
+       
        
         <div class="row">
           <div class="col-25">

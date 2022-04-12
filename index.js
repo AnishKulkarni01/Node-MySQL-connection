@@ -98,14 +98,16 @@ app.get('/showDoctors',(req,res)=>{
     })
 })
 
-app.get('/patientID/:mail',(req,res)=>{
-    db.query('select p_id from patient WHERE p_mail= ?',[req.params.mail],(err,rows,fields)=>{
+app.get('/patientID/:plmail',(req,res)=>{
+    db.query('select p_id from patient WHERE p_mail= ?',[req.params.plmail],(err,rows,fields)=>{
         if(!err)
         res.send(rows);
         else
         console.log(err);
     })
 })
+
+
 
 
 app.get('/addPatient', (req,res)=>{
@@ -120,3 +122,22 @@ app.get('/addPatient', (req,res)=>{
         console.log(err);
     })
 })
+
+
+
+
+app.get('/showAvailableDoctors/:dt/:tm/:spec',(req,res)=>{
+    db.query('SELECT distinct(d.d_id),d.d_name,d.spec FROM doctor d left join appointment a ON d.d_id=a.d_id WHERE d.d_id NOT IN( SELECT d_id FROM appointment WHERE a_dt=? AND a_tm=?) AND d.spec=?;' ,[req.params.dt,req.params.tm,req.params.spec],(err,rows,fields)=>{
+        if(!err)
+        res.send(rows);
+        else
+        console.log(err);
+    })
+})
+
+
+// SELECT distinct(d.d_name), d.d_gend, d.spec, a.r_stat
+// FROM doctor d join d_availability a
+// ON d.d_id=a.d_id
+// WHERE d.spec=spec
+// AND a.r_stat='yes';
