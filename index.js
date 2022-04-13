@@ -18,7 +18,7 @@ var db=mysql.createConnection({
     host:'localhost',
     user: 'root',
     password :'1234',
-    database:'hmsDB'
+    database:'project'
 
 });
 db.connect((err)=>{
@@ -98,6 +98,16 @@ app.get('/showDoctors',(req,res)=>{
     })
 })
 
+app.get('/showAppointments',(req,res)=>{
+    db.query('select * from appointment',(err,rows,fields)=>{
+        if(!err)
+        res.send(rows);
+        else
+        console.log(err);
+    })
+})
+
+
 app.get('/patientID/:plmail',(req,res)=>{
     db.query('select p_id from patient WHERE p_mail= ?',[req.params.plmail],(err,rows,fields)=>{
         if(!err)
@@ -134,7 +144,29 @@ app.get('/showAvailableDoctors/:dt/:tm/:spec',(req,res)=>{
         console.log(err);
     })
 })
+app.get('/showAvailableRooms/:dt/:tm',(req,res)=>{
+    db.query('SELECT distinct(room_no) FROM appointment WHERE room_no NOT IN( SELECT room_no FROM appointment WHERE a_dt=? AND a_tm=?);' ,[req.params.dt,req.params.tm],(err,rows,fields)=>{
+        if(!err)
+        res.send(rows);
+        else
+        console.log(err);
+    })
+})
 
+
+
+app.get('/addAppointment', (req,res)=>{
+    console.log(req.query)
+
+
+    db.query('insert into appointment (a_dt,a_tm,p_id,d_id,room_no) VALUES (?,?,?,?,?)',
+    [req.query.bdt,req.query.btm,req.query.bpid,req.query.bdid,req.query.brno],(err,rows,fields)=>{
+        if(!err)
+        res.send(rows);
+        else
+        res.send(err);
+    })
+})
 
 // SELECT distinct(d.d_name), d.d_gend, d.spec, a.r_stat
 // FROM doctor d join d_availability a

@@ -24,30 +24,30 @@
   </script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
-        <!-- Brand/logo -->
-        <a class="navbar-brand" href="./index.html" style="margin-left: 80px;"><h1>Hospital</h1></a>
-        
-        <!-- Links -->
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#mid">Link 1</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link 2</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link 3</a>
-          </li>
-        </ul>
-      </nav>
-      
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="#" style="margin-left: 80px;"><h1>Hospital</h1></a>
+    
+    <!-- Links -->
+    <ul class="navbar-nav container-fluid" style="justify-content: end;">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html" ><b>Log Out</b></a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="#admin"><b>Admin</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#foot"><b>Links</b></a>
+      </li> -->
+    </ul>
+  </nav>
+  
     <section>
      <div class="row">
         <div class="container-fluid col-md-4" style="background-color: #f2f2f2; padding-top: 15px; margin-top: 50px;">
            <div>
             <form id="pid_form" >
-              <h3 style="text-align: center;">Please Enter</h3>
+              <h5 style="text-align: center;">Please Enter</h5>
       
               <div class="row">
                 <div class="col-25">
@@ -73,7 +73,7 @@
           
           <div class="container-fluid col-md-4" style="background-color: #f2f2f2; padding-top: 15px; margin-top: 50px;">
             <form id="dspec_form" >
-              <h3 style="text-align: center;">Please Enter</h3>
+              <h5 style="text-align: center;">Please Enter</h5>
       
               <div class="row">
                 <div class="col-25">
@@ -102,7 +102,7 @@
         
         </div>
 
-        <p id="PID"> here pid</p>
+        <p id="PID">........</p>
         <div class="row" style="margin:15px 15%">
             <div class="col-md-4">    <table class="">
                 <thead>
@@ -126,7 +126,7 @@
           
               <div class="container col-md-6">
                 <form action="">
-                  <h3 style="text-align: center;">Book an appointment</h3>
+                  <h5 style="text-align: center;">Choose date and time for appointment</h5>
                   
                   <div class="row">
                     <div class="col-25">
@@ -153,7 +153,7 @@
           </div>
 
 
-        <div class="row container-fluid " style="padding-top: 30px;">
+        <div class="row container-fluid " style="padding-top: 30px; margin-top:50px;">
        
             <div class="col-md-3 col-sm-12">
                 <h4>Check available doctors
@@ -205,12 +205,12 @@
         </div>
        
     </section>
-    <div class="row" style="margin: 50px 20px 20px 20px;" >
+    <div class="row" style="margin: 50px 20px 20px 20px; margin-bottom: 100px;" >
 <!-- book an appointment -->
 
-    <div class="container col-md-6">
+    <div class="container col-md-6" >
       <form action="">
-        <h3 style="text-align: center;">Book an appointment</h3>
+        <h3 style="text-align: center; margin-bottom: 50px;">Book an appointment</h3>
         <div class="row">
           <div class="col-25">
             <label for="fname">PatientID</label>
@@ -223,32 +223,24 @@
        
         <div class="row">
           <div class="col-25">
-            <label for="id">Address</label>
+            <label for="id">DoctorID</label>
           </div>
           <div class="col-75">
-            <input type="text" id="age" name="age" placeholder="Your address..">
+            <input type="number" id="bdid" name="bdid" placeholder="Available doctor's ID..">
           </div>
         </div>
   
         <div class="row">
           <div class="col-25">
-            <label for="">E-mail</label>
+            <label for="">RoomNo.</label>
           </div>
-          <div class="col-75">
-            <input type="email" id="mail" name="mail" placeholder="Your mail..">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-25">
-            <label for="">Password</label>
-          </div>
-          <div class="col-75">
-            <input type="password" id="rpass" name="rpass" placeholder="Your password..">
+          <div class="col-75" style="margin-bottom: 100px;">
+            <input type="number" id="brno" name="brno" placeholder="Available room's no..">
           </div>
         </div>
-       
-        <div class="row">
-          <input type="submit" value="Submit">
+        
+       <div class="row">
+          <button id="b24">Submit</button>
         </div>
       </form>
     </div>
